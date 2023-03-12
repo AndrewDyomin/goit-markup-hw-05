@@ -8,6 +8,7 @@ body {
     --iris: #4D5AE5;
     --slate: #434455;
     --white: #FFFFFF;
+    --black: #000000;
     --ocean: #404BBF;
     --cloud: #F4F4FD;
     --cornflower: #E7E9FC;
@@ -89,12 +90,12 @@ img {
     text-decoration: none;
     color: var(--navy-blue);
     position: relative;
+    transition: color 250ms var(--timing);
 }
 
 .header-item-link:hover,
 .header-item-link:focus {
     color: var(--ocean);
-    transition: color 250ms var(--timing);
 }
 
 .header-item-link.active {
@@ -106,6 +107,7 @@ img {
     position: absolute;
     width: 100%;
     height: 4px;
+    border-radius: 2px;
     background-color: var(--ocean);
     left: 0;
     bottom: -24px;
@@ -129,12 +131,12 @@ img {
     letter-spacing: 0.02em;
     color: var(--slate);
     text-decoration: none;
+    transition: color 250ms var(--timing);
 }
 
 .header-contacts-link:hover,
 .header-contacts-link:focus {
     color: var(--ocean);
-    transition: color 250ms var(--timing);
 }
 
 /*----------------header------------------*/
@@ -179,13 +181,13 @@ img {
     min-width: 169px;
     padding: 16px 32px;
     margin-top: 48px;
+    transition: background-color 250ms var(--timing);
 }
 
 
 .hero-section-btn:hover,
 .hero-section-btn:focus {
     background-color: var(--ocean);
-    transition: background-color 250ms var(--timing);
 }
 
 .backdrop {
@@ -214,7 +216,8 @@ img {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
-    color: #000000;
+    color: var(--black);
+    transition: background-color 250ms var(--timing), color 250ms var(--timing);
 }
 
 .close {
@@ -229,14 +232,13 @@ img {
 .btn-close:is(:hover, :focus) {
     background-color: var(--ocean);
     color: var(--white);
-    transition: background-color 250ms var(--timing), color 250ms var(--timing);
 }
 
 .modal {
     position: fixed;
     width: 408px;
     min-height: 576px;
-    background: #FCFCFC;
+    background: var(--cloud);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     top: 50%;
@@ -404,11 +406,11 @@ img {
     border-radius: 50%;
     background-color: var(--iris);
     color: var(--cloud);
+    transition: background-color 250ms var(--timing);
 }
 
 .social-link:is(:hover, :focus) {
     background-color: var(--ocean);
-    transition: background-color 250ms var(--timing);
 }
 
 .team-social-icon {
@@ -442,12 +444,12 @@ img {
     border: 1px solid var(--light-slate);
     border-radius: 4px;
     color: var(--light-slate);
+    transition: color 250ms var(--timing), border 250ms var(--timing);
 }
 
 .customers-link:is(:hover, :focus) {
     color: var(--ocean);
     border: 1px solid var(--ocean);
-    transition: color 250ms var(--timing), border 250ms var(--timing);
 }
 
 .customers-icon {
@@ -474,7 +476,9 @@ img {
     border-radius: 4px;
     cursor: pointer;
     padding: 12px 24px;
-
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing);
 }
 
 .portfolio-btn:hover,
@@ -482,9 +486,6 @@ img {
     background-color: var(--ocean);
     color: var(--white);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition-property: background-color, color, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: var(--timing);
 }
 
 .portfolio-list {
@@ -506,6 +507,7 @@ img {
 .portfolio-item-link {
     display: block;
     text-decoration: none;
+    transition: box-shadow 250ms var(--timing);
 }
 
 .product-card-img {
@@ -529,9 +531,6 @@ img {
 
 .portfolio-item-link:is(:hover, :focus) {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: var(--timing);
 }
 
 .portfolio-item-link:is(:hover, :focus) .overlay-text {
@@ -627,11 +626,11 @@ img {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--cloud);
+    transition: background-color 250ms var(--timing);
 }
 
 .footer-social-link:is(:hover, :focus) {
     background-color: var(--green);
-    transition: background-color 250ms var(--timing);
 }
 
 .footer-social-icon {
